@@ -4,9 +4,10 @@ import Image from 'next/image';
 import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
+import Utterances from './Utterances';
 
-const name = 'Your Name';
-export const siteTitle = 'Next.js Sample Website';
+const name = 'Genie';
+export const siteTitle = 'Welcome To Genieland';
 
 export default function Layout({ children, home }) {
   const [theme, setTheme] = useState(() =>
@@ -14,7 +15,6 @@ export default function Layout({ children, home }) {
       localStorage.getItem("theme") === "dark" ? "dark" : "light"
       : "light"
   )
-  console.log(theme)
 
   useEffect(() => {
     if (theme === "dark") document.querySelector('body').classList.add("dark")
@@ -92,9 +92,12 @@ export default function Layout({ children, home }) {
         </header>
         <main>{children}</main>
         {!home && (
-          <div className={styles.backToHome}>
-            <Link href="/">← Back to home</Link>
-          </div>
+          <>
+            <Utterances />
+            <div className={styles.backToHome}>
+              <Link href="/">← Back to home</Link>
+            </div>
+          </>
         )}
       </div>
     </div>
