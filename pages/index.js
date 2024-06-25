@@ -9,6 +9,11 @@ export default function HomePage() {
       </Head>
       <main>
         <h1>My Blog</h1>
+        <ul>
+          <li>One</li>
+          <li>Two</li>
+          <li>Three</li>
+        </ul>
       </main>
     </>
   )
