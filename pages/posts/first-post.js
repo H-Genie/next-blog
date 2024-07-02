@@ -1,6 +1,7 @@
 import Head from "next/head"
 
 export const getStaticProps = async () => {
+  console.log("[FirstPostPage] getStaticProps()")
   return {
     props: {
       post: {
@@ -12,11 +13,11 @@ export const getStaticProps = async () => {
 }
 
 export default function FirstPostPage({ post }) {
-  console.log("[AboutPage] render : ", props)
+  console.log("[AboutPage] render : ", post)
   return (
     <>
       <Head>
-        <title>{post.title} - My Blog</title>
+        <title>{`${post.title} - My Blog`}</title>
       </Head>
       <main>
         <h1>First Post</h1>
