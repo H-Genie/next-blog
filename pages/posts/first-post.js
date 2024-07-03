@@ -18,7 +18,7 @@ export default function FirstPostPage({ post }) {
       </Head>
       <main>
         <h1>First Post</h1>
-        <p>{post.body}</p>
+        <article dangerouslySetInnerHTML={{ __html: post.body }} />
       </main>
     </>
   )
