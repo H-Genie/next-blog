@@ -1,4 +1,5 @@
 import { useState } from "react"
+import DarkTheme from "./DarkTheme"
 
 export default function ThemeSwitch() {
   const [darkMode, setDarkMode] = useState(false)
@@ -16,6 +17,7 @@ export default function ThemeSwitch() {
           cursor: pointer;
         }
       `}</style>
+      {darkMode && <DarkTheme />}
     </>
   )
 }
